@@ -95,3 +95,56 @@ docker build -t myapp .
 ![alt text](image-3.png)
 
 ![alt text](image-4.png)
+
+
+## Docker Networks  | brigde & host
+
+#### <strong> Docker Network </strong> is virtual network that allows Docker containers to communicate with each other and with external systems, while controlling how that communication happens.
+
+#### <strong> Bridge Network </strong> is the dafult network type in Docker.Each container gets its own private IP address and communicates through a virtual bridge created by Docker.
+#### <strong> Host Network </strong> removes the network isolation between the container and the Docker host. The container shares the host’s IP address and ports, so there is no need for port. mapping.
+
+
+![alt text](image-5.png)
+
+```bash 
+# command to shows networks listed 
+docker network ls 
+```
+
+![alt text](image-6.png)
+
+```bash 
+# command to create a network 
+# networkName in this case is my-network
+docker network create + networkName
+```
+
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-9.png)
+
+```bash 
+docker run -d --name my-container-6 --network my-network nginx:latest
+# Part	What it does
+# docker run	Creates and runs a new container from an image.
+# -d	Runs the container in detached mode, meaning it runs in the background.
+# --name my-container-6	Assigns a custom name to the container (my-container-6).
+# --network my-network	Connects the container to the Docker network called my-network. This allows it to communicate with other containers on the same network.
+# nginx:latest	Specifies the image to use for creating the container. In this case, the latest version of Nginx.
+
+docker inspect my-container-6
+# inspect my-container-6
+```
+
+```bash
+docker network disconnect my-network my-container-6
+#disconnet  cointainer from the network assign in this cases my-network. 
+```
+
+![alt text](image-10.png)
+
+```bash
+docker network rm my-network 
+# removed network listed. in this case my-network.
+```
