@@ -1,0 +1,31 @@
+# 🐳 Learning Docker
+
+This project is about learning **Docker** — a tool that helps you run apps inside **containers** so they work the same everywhere.
+
+---
+
+## 🚀 What is Docker?
+
+Docker lets you package your app with everything it needs (code, libraries, system tools) and run it easily on any computer.
+
+---
+
+## 💡 Why Learn Docker?
+
+- No more “it works on my machine” problems  
+- Easy to set up and share apps  
+- Great for testing and deployment  
+
+---
+
+## 🧱 Basic Commands
+
+```bash
+# Check Docker version
+docker --version
+
+# Run a test container
+docker run hello-world
+
+# See running containers
+docker ps
