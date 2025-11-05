@@ -29,6 +29,53 @@ docker run hello-world
 
 # See running containers
 docker ps
+
+# See all containers active | no active
+docker ps -a
+
+#Command take a image as base and create a container
+docker run + imageName
+
+#Execute container in second plane
+docker run + imageName -d
+
+#Mapped ports between containers and ports 
+docker run + imageName -p
+
+# to  assign name to specific container 
+docker run + imageName --name
+
+# to search  
+docker search 
+
+# show images 
+docker images 
+
+# download images 
+docker pull + imageName 
+
+# to removed images base on id 
+docker rm + imageID
+
+#to inspect 
+docker inspect
+
+# eliminate all containers
+docker prune 
+
+
+#execute command into a running container 
+docker exec 
+
+#Dockerfile is a text file that contains a set instructions used by Docker to build an image automatically
+
+# Build an image from a Dockerfile with an assigned name (in this case, "myapp").
+# The "." indicates the current directory where the Dockerfile is located.
+docker build -t myapp .
+
+
+
+
 ```
 
 
