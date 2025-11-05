@@ -29,3 +29,11 @@ docker run hello-world
 
 # See running containers
 docker ps
+
+
+
+## Create Repo  at DockerHUB | using push command 
+
+![alt text](image.png)
+
+![alt text](image-1.png)
