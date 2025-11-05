@@ -37,3 +37,14 @@ docker ps
 ![alt text](image.png)
 
 ![alt text](image-1.png)
+
+
+## TEST 5 run a simple web page inside a Docker container using Nginx.
+
+#### able to create a dockerfile and myapp.html build and run container @ http://localhost:7070/myapp.html
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+![alt text](image-4.png)
