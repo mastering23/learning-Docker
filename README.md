@@ -148,3 +148,24 @@ docker network disconnect my-network my-container-6
 docker network rm my-network 
 # removed network listed. in this case my-network.
 ```
+
+## Docker Volumes | Bind Mounts
+
+#### <strong> Volumes </strong> is a special storage area managed by Docker, independent of the containers filesystem and can be shared between multiple containers. 
+
+
+
+
+#### <strong> Bind Mounts </strong> is when you mount a specific directory or file from your host machine directly into the container.
+
+
+
+
+![alt text](image-11.png)
+
+```bash
+docker run -d --name my-mongodb-container -v "/mongodb_data:/data/db" mongo:latest  
+# Creates a container based on the MongoDB image with a bind mount.
+# The bind mount maps the local directory /mongodb_data to /data/db inside the container,
+# allowing MongoDB data to persist even if the container is removed.
+```
