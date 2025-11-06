@@ -169,3 +169,28 @@ docker run -d --name my-mongodb-container -v "/mongodb_data:/data/db" mongo:late
 # The bind mount maps the local directory /mongodb_data to /data/db inside the container,
 # allowing MongoDB data to persist even if the container is removed.
 ```
+![alt text](image-12.png)
+
+```bash
+docker exec -it my-mongodb-container bash  
+# Gives you terminal access inside the container to interact with the MongoDB environment.
+
+# Start the MongoDB shell inside the container
+mongosh  
+# Opens the MongoDB interactive shell to run database commands.
+
+# Switch to (or create) a database named 'dbtest'
+use dbtest  
+
+# Insert new user documents into the 'users' collection
+db.users.insert({"name":"Mark Ten"})  
+db.users.insert({"name":"Jasmin Smith"})  
+db.users.insert({"name":"Peter Scale"})  
+# Adds three new user records to the database.
+
+# Display all user records from the 'users' collection
+db.users.find()  
+# Shows the inserted documents in JSON-like format.
+
+```
+
